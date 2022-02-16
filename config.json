@@ -1,9 +1,9 @@
 ﻿{
     "database": {
-        "host": "localhost",
+        "host": "mplandatabase.cryazldfrhhh.us-east-1.rds.amazonaws.com",
         "port": 3306,
-        "user": "root",
-        "password": "",
+        "user": "admin",
+        "password": "mplandatabase",
         "database": "mplan_db"
     },
     "secret": "pYOH27ARryrxs4dzx6ywd4Rj8",
