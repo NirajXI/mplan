@@ -1,0 +1,11 @@
+﻿{
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+        "database": "mplan_db"
+    },
+    "secret": "pYOH27ARryrxs4dzx6ywd4Rj8",
+    "apikey":"7589ce166cbdbe4bd88428adbfdca16e"
+}
