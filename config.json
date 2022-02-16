@@ -4,7 +4,8 @@
         "port": 3306,
         "user": "admin",
         "password": "mplandatabase",
-        "database": "mplan_db"
+        "database": "mplan_db",
+        "dialect": "mysql"
     },
     "secret": "pYOH27ARryrxs4dzx6ywd4Rj8",
     "apikey":"7589ce166cbdbe4bd88428adbfdca16e"
