@@ -6,9 +6,12 @@ const { Op } = require("sequelize");
 
 module.exports = {
     getDTHPlans,
+    getDTHInfo,
     verifyApiKey,
     verifyRequestCounts,
     saveRequests,
+    getUserByID,
+    getSubscriberByID,
     getAll
 };
 
@@ -94,14 +97,20 @@ async function getDTHPlans(params) {
     return await axios.get("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&operator="+params.operator);
 
 }
+
+async function getDTHInfo(params) {
+  console.log("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
+  return await axios.get("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
+
+}
   
-async function getUser(id) {
+async function getUserByID(id) {
   const user = await db.User.findByPk(id);
   if (!user) throw 'User not found';
   return user;
 }
 
-async function getSubscriber(id) {
+async function getSubscriberByID(id) {
   const subscriber = await db.Subscriber.findByPk(id);
   if (!subscriber) throw 'Subscriber not found';
   return subscriber;
