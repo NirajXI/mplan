@@ -12,6 +12,7 @@ module.exports = {
     saveRequests,
     getUserByID,
     getSubscriberByID,
+    getDTHRefresh,
     getAll
 };
 
@@ -93,15 +94,15 @@ async function saveRequests(parameterscreate) {
 }
 
 async function getDTHPlans(params) {
-
     return await axios.get("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&operator="+params.operator);
-
 }
 
 async function getDTHInfo(params) {
-  console.log("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
   return await axios.get("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
+}
 
+async function getDTHRefresh(params) {
+  return await axios.get("https://www.mplan.in/api/Dthheavy.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
 }
   
 async function getUserByID(id) {
