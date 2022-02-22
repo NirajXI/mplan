@@ -98,7 +98,7 @@ async function getDTHPlans(params) {
 }
 
 async function getDTHInfo(params) {
-  return await axios.get("https://www.mplan.in/api/dthplans.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
+  return await axios.get("https://www.mplan.in/api/Dthinfo.php?apikey="+config.apikey+"&offer=roffer&tel="+params.vcnumber+"&operator="+params.operator);
 }
 
 async function getDTHRefresh(params) {
